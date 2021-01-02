@@ -6,6 +6,8 @@ join('JKLMNOPQ', 'ack')
 
 find('nonna', 'o', 0)
 
+# test commit with -m ""
+
 
 
 
