@@ -50,6 +50,21 @@ Esercizio paragrafo 8.4 di ThinkPython
 
 """
 
-fruit = 'banana'
-fruit[:]
+## fruit = 'banana'
+## fruit[:]
 
+"""
+Prende in input una stringa e restituisce in output i caratteri in una stringa
+
+"""
+
+spelling = []
+
+def char_division(s):
+    index = 0
+    while True:
+        char = s[index]
+        spelling.append(char)
+        if index == len(s) - 1:
+            return spelling
+        index = index + 1
