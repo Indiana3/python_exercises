@@ -63,20 +63,19 @@ def any_lowercase5(s):
             return False
     return True
 
-print(is_palindrome2('aquila'))
+# print(is_palindrome2('aquila'))
 
-print(any_lowercase5('ciao'))
+# print(any_lowercase5('ciao'))
 
+def rotate_word(s, n):
+    for c in s:
+        numeric_code_rotated = ord(c) + n
+        chr_rotated = chr(numeric_code_rotated)
+        print(chr_rotated, end="")
+
+# rotate_word('squalo tigre', -1)
+
+fin = open('C:/Users/Lorenzo/Desktop/Informatica/tomorrowDevs/learn_python/python_exercises/tp_chapter8/words.txt')
+for line in fin:
+    print(line.strip())
     
-
-
-
-
-
-
-
-
-
-
-
-
