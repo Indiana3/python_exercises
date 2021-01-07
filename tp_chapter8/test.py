@@ -8,7 +8,7 @@ def over_20_chr():
             print(word)
 
 def has_no_e():  
-    fin = open(os.path.abspath('tp_chapter8/words.txt'))
+    fin = open(os.path.abspath('words.txt'))
     for line in fin:
         word = line.strip()
         for c in word:
