@@ -75,7 +75,13 @@ def rotate_word(s, n):
 
 # rotate_word('squalo tigre', -1)
 
-fin = open('C:/Users/Lorenzo/Desktop/Informatica/tomorrowDevs/learn_python/python_exercises/tp_chapter8/words.txt')
-for line in fin:
-    print(line.strip())
-    
+
+
+
+
+
+
+
+
+
+
