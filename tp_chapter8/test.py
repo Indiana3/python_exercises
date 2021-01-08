@@ -37,7 +37,29 @@ def uses_all(word, to_use):
 def uses_all1(word, to_use):
     return uses_only(to_use, word)
 
- print()
+def has_consecutive_double_letters(word):
+    i = 0
+    count = 0
+    while i < len(word) - 1:
+        if word[i] == word[i + 1]:
+            count = count + 1
+            if count == 3:
+                return True
+            i = i + 2
+        else:
+            count = 0
+            i = i + 1
+    return False
+
+def authentication(f, word):
+    if has_consecutive_double_letters(word):
+        return 'Sei autenticato'
+    return 'Password errata!'
+
+print(authentication(has_consecutive_double_letters, 'aabbdcc'))
+
+ 
+
 
 
 
