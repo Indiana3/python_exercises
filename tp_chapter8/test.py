@@ -70,10 +70,54 @@ def authentication(f, word):
         return 'Sei autenticato'
     return 'Password errata!'
 
-print(authentication(has_3consecutive_double_letters, 'aabbdcc'))
+def is_palindronic_odometer(number):
+    if len(number) != 6:
+        return
+    i = 2
+    j = 5
+    count = 0
+    while count <= 3:
+        if number[i] != number[j] or number[i+1] != number[j-1]:
+            return False
+        count = count + 1
+        number = str(int(number) + 1)
+        if count == 1:
+            i = i - 1
+        if count == 2:
+            j = j - 1
+        if count == 3:
+            i = i - 1
+            j = j + 1
+            if number [i+2] != number [j-2]:
+                return False
+    return True
 
+def has_palindrome(i, start, length):
+    """Checks if the string representation of i has a palindrome.
+    i: integer
+    start: where in the string to start
+    length: length of the palindrome to check for
+    """
+    s = str(i)[start:start+length]
+    return s[::-1] == s
  
+def check(i):
+    """Checks if the integer (i) has the desired properties.
+    i: int
+    """
+    return (has_palindrome(i, 2, 4) and
+            has_palindrome(i+1, 1, 5) and
+            has_palindrome(i+2, 1, 4) and
+            has_palindrome(i+3, 0, 6))
 
+def check_all():
+    """Enumerate the six-digit numbers and print any winners.
+    """
+    i = 100000
+    while i <= 999996:
+        if check(i):
+            print(i)
+        i = i + 1
 
-
-
+print('The following are the possible odometer readings:')
+check_all()
