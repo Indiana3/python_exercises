@@ -10,6 +10,8 @@ human = int(input("Please, enter human years: "))
 # Conversion from human years to dog years
 if human < 0:
     print("Please, enter a positive number")
+elif human == 0:
+    print(human, "human years are %i" % human, "dog years")
 elif human == 1:
     print(human, "human years are %.1f" % UP_TO_2, "dog years")
 elif human == 2:
