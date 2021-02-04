@@ -25,15 +25,18 @@ letter = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-",
 "D+", "D", "F"]
 
 # Convert grade points into letter grade
-grade_letter = letter[-1]
 i = 0
 j = 1
 while i < len(points)-1:
-    if abs(points[i] - grade_points) < abs(points[i+1] - grade_points):
+    if abs(points[i] - grade_points) > abs(points[i+1] - grade_points):
+        if i == len(points) - 2:
+            grade_letter = letter[-1]
+        i = i + 1
+        j = j + 1
+    else:
         grade_letter = letter[j]
         break
-    i = i + 1
-    j = j + 1
+
 if grade_points >= points[0]:
     grade_letter = letter[0]
 
