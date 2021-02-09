@@ -1,11 +1,11 @@
 ##
-# Computes the avarage of a collection of values
+# Compute the avarage of a collection of values
 #
 
-# Reads the first value from the user
+# Read the first value from the user
 value = float(input("Please, enter the first value: "))
 
-# Checks the first value is not 0
+# Check the first value is not 0
 if value == 0:
     print("The first value can't be 0")
     avarage = None
@@ -14,7 +14,7 @@ else:
     total = 0
     n_value = 0
 
-# Computes and display the avarage of values 
+# Compute and display the avarage of values 
 while value != 0:
     total = total + value
     n_value = n_value + 1
