@@ -2,6 +2,7 @@
 # Display original prices, discount amounts and discounted prizes
 #
 DISCOUNT_RATIO = 0.6
+PRICE_INCREASE = 5.00
 
 # Start with the lower prize
 prize = 4.95
@@ -17,6 +18,6 @@ while prize <= 24.95:
     print("Discount amount: %.2f" % disc_amount)
     disc_prize = prize - disc_amount
     print("Discounted prize: %.2f" % disc_prize)
-    prize = prize + 5.00
+    prize = prize + PRICE_INCREASE
     
 
