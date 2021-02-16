@@ -11,6 +11,9 @@ r = s[::-1]
 # Initialize a counter to 0 to traverse the reverse string
 i = 0
 
+# Think as if the string entered is a palindrome
+is_palindrome = True
+
 # Determine if the string is a palindrome
 for c in s:
     if c != r[i]:
@@ -18,9 +21,6 @@ for c in s:
         break
     else:
         i = i + 1
-
-# The string is a palindrome
-is_palindrome = True
 
 # Display an appropriate output message
 if is_palindrome:
