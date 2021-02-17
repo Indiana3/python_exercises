@@ -4,8 +4,8 @@
 #
 
 # Print 2 margin spacings for the row of labels
-# Print the row of labels
 print("  ", end="")
+# Print the row of labels
 for i in range(1, 11):
     print("%4i" % i, end="")
 print()
