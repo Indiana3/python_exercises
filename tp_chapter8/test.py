@@ -8,13 +8,19 @@ def over_20_chr():
         if len(word) > 20:
             print(word)
 
-def has_no_e():  
+def has_e():  
     fin = open(os.path.abspath('words.txt'))
+    counter = 0
     for line in fin:
         word = line.strip()
         for c in word:
             if c == 'e':
                 print(word)
+                counter = counter + 1
+                break
+    print(counter)
+
+has_e()
 
 def avoids(word, unusable):
     for letter in word:
@@ -119,5 +125,5 @@ def check_all():
             print(i)
         i = i + 1
 
-print('The following are the possible odometer readings:')
-check_all()
+# print('The following are the possible odometer readings:')
+# check_all()
