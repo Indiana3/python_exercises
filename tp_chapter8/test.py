@@ -20,7 +20,26 @@ def has_e():
                 break
     print(counter)
 
-has_e()
+def has_r():  
+    fin = open(os.path.abspath('words.txt'))
+    counter = 0
+    for line in fin:
+        word = line.strip()
+        for c in word:
+            if c == 'r':
+                print(word)
+                counter = counter + 1
+                break
+    print(counter)
+
+def words_counter():  
+    fin = open(os.path.abspath('words.txt'))
+    words_num = 0
+    for line in fin:
+        word = line.strip()
+        print(word)
+        words_num = words_num + 1
+    print(words_num) 
 
 def avoids(word, unusable):
     for letter in word:
