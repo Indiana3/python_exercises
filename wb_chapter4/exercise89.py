@@ -39,8 +39,8 @@ def to_ordinal_num(n):
 
 # Read the integer from the user and display its ordinal
 def main():
-    n = int(input("Please, enter a number between 1 and 12: "))
-    print("The ordinal number of %i is %s" % (n, to_ordinal_num(n)))
+    for n in range (1, 13):
+        print("The ordinal number of %i is %s" % (n, to_ordinal_num(n)))
 
 # Call the main function
 if __name__ == "__main__":
