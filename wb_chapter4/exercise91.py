@@ -30,9 +30,8 @@ def ordinalDate(d, m, y):
         days_in_february = 28
     
     # Count the days in the previous months
-    days_in_previous_months = 0
-    if m == 1:
-        days_in_previous_months = days_in_previous_months
+    if m >= 1:
+        days_in_previous_months = 0
     if m >= 2:
         days_in_previous_months += DAYS_IN_JANUARY
     if m >= 3:
