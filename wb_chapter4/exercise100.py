@@ -19,7 +19,7 @@ def randomPassword():
 
     # Choose a random character from 33 to 126 positions of ASCII table
     password = ""
-    for i in range(password_len):
+    for _ in range(password_len):
         password += chr(randrange(ASCII_LOWER_POSITION, ASCII_HIGHER_POSITION + 1))
     return password
 
