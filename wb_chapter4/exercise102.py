@@ -10,7 +10,7 @@
 #   at least 1 lowercase letter (ASCII positions 97-123)
 #   at least 1 number           (ASCII positions 48-58)
 # @return False otherwise
-def isValid(s):
+def isValidPassword(s):
     # Check the first condition
     if len(s) < 8:
         return False
@@ -43,7 +43,7 @@ def isValid(s):
 # Read a password from user and check if it's valid
 def main():
     s = input("Please, enter a valid password: ")
-    print("Valid password? {}".format(isValid(s)))
+    print("Valid password? {}".format(isValidPassword(s)))
 
 # Call the main function
 if __name__ == "__main__":
