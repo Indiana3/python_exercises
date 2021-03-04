@@ -40,7 +40,8 @@ def main():
         print("Int {} --> hex {}". format(n, int2hex(n)))
 
 # Call the main function
-main()
+if __name__ == "__main__":
+    main()
     
 
 
