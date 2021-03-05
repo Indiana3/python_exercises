@@ -33,7 +33,8 @@ def main():
     print("In the {}° month of {} there are {} days".format(m, y, d))
 
 # Call the main function
-main()
+if __name__ == "__main__":
+    main()
 
 
 
