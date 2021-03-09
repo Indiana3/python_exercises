@@ -12,4 +12,9 @@ def has_duplicates(t):
     return False
 
 # Call has_duplicates function and display the result
-print(has_duplicates([1, 2, 3, 1]))
+def main():
+    print(has_duplicates([1, 2, 3, 1]))
+
+# Call the main function
+if __name__ == "__main__":
+    main()
