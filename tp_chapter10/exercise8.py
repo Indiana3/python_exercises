@@ -12,18 +12,18 @@ def days(m):
     else:
         return 30
 
-# Generate random samples of 23 birthday
+# Generate random samples of 23 birthdays
 # Check if 2 people has birthday on the same day
 def main():
     # Generate 23 birthdays and arrange them in a list t
     STUDENTS = 23
     birthdays = []
-    for i in range (STUDENTS):
+    for _ in range (STUDENTS):
         m = str(randint(1, 12))
         d = str(randint(1, days(m)))
         birthday = [d, m]
         birthdays.append(birthday)
-    # Check if in birthdays list a birthday appears twice
+    # Check if in birthdays list a birthday appears twice or more
     birthday_twice = []
     for i in range (0, len(birthdays)):
         if birthdays[i] in birthdays[:i]:
@@ -33,7 +33,7 @@ def main():
         print("Nobody has birthday on the same day")
     else:
         for i in range (len(birthday_twice)):
-            print("Two students has birthday on the")
+            print("Two or more students has birthday on the")
             print("th of ".join(birthday_twice[i]))
 
 # Call the main function
