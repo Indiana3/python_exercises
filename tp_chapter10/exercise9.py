@@ -23,20 +23,25 @@ def list_builder2(file_path):
         t += [word]
     return t
 
-# Compute time list_builder function takes to run
-start_time = time()
-t = list_builder('../tp_chapter8/words.txt')
-elapsed_time = time() - start_time
+def main():
+    # Compute time list_builder function takes to run
+    start_time = time()
+    t = list_builder('../tp_chapter8/words.txt')
+    elapsed_time = time() - start_time
 
-print(len(t))
-print(t[:10])
-print(elapsed_time, 'seconds')
+    print(len(t))
+    print(t[:10])
+    print(elapsed_time, 'seconds')
 
-# Compute time the list_builder2 function takes to run
-start_time = time()
-t = list_builder2('../tp_chapter8/words.txt')
-elapsed_time = time() - start_time
+    # Compute time the list_builder2 function takes to run
+    start_time = time()
+    t = list_builder2('../tp_chapter8/words.txt')
+    elapsed_time = time() - start_time
 
-print(len(t))
-print(t[:10])
-print(elapsed_time, 'seconds')
+    print(len(t))
+    print(t[:10])
+    print(elapsed_time, 'seconds')
+
+# Call the main functiom
+if __name__ == "__main__":
+    main()
