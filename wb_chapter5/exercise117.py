@@ -32,6 +32,7 @@ def wordsInAString(s):
             
             # Restore the word with no punctuation mark
             word = "".join(word_splitted)
+            
             # And add it to the list
             words.append(word)
     return words
