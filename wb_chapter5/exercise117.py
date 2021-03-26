@@ -19,11 +19,9 @@ def wordsInAString(s):
         word_splitted = list(string_splitted[i])
 
         # Remove the punctuation mark if and while it is the first element of the list
-        while word_splitted[0] in punctuation_marks:
-            word_splitted.pop(0)
-            # Necessary if the list is made of with only punctuation marks
-            if len(word_splitted) == 0:
-                break 
+        while len(word_splitted) > 0:
+            if word_splitted[0] in punctuation_marks:
+                word_splitted.pop(0)
         
         # Execute only if word_splitted is not empty
         if len(word_splitted) != 0:
