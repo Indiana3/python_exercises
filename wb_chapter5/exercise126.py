@@ -16,13 +16,13 @@ def deal(players, cards_per_hand, shuffled_deck):
     for _ in range(players):
         hands.append([])
     # For the number of cards in each hand
-    for j in range(cards_per_hand):
+    for _ in range(cards_per_hand):
         # For each player
         for i in range(players):
             # Remove the top card of the deck
             dealt_card = shuffled_deck.pop(0)
             # Add it to the player's hand 
-            hands[i].insert(j, dealt_card)
+            hands[i].append(dealt_card)
     return hands
 
 def main():
