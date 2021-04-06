@@ -14,7 +14,7 @@ def shuffleDeck(deck):
 # Create an empty list to store all threads
 threads = []
 
-# Start time
+# Time starts
 start = time.time()
 
 # Each thread is a deck shuffling
