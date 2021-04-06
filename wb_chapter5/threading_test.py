@@ -19,8 +19,8 @@ threads = []
 start = time.time()
 
 # Each thread is a deck shuffling
-# Repeat it for 3 times
-for _ in range(3):
+# Repeat it for 4 times
+for _ in range(4):
     t = threading.Thread(target=shuffleDeck, args=[deck])
     t.start()
     # Add each thread to threads list
@@ -39,8 +39,8 @@ print("Shuffling a deck four times take %f seconds" %(end-start))
 # Time starts
 start = time.time()
 
-# Repeat deck shuffling for 3 times
-for _ in range(3):
+# Repeat deck shuffling for 4 times
+for _ in range(4):
     shuffleDeck(deck)
 
 # Time ends
