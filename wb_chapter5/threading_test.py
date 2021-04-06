@@ -8,6 +8,7 @@ deck = createDeck()
 # Shuffle the deck and display what you get.
 def shuffleDeck(deck):
     print(shuffle(deck))
+    time.sleep(2)
 
 ## Using threading module
 
@@ -35,7 +36,7 @@ print("Shuffling a deck four times take %f seconds" %(end-start))
 
 ## Sequential execution
 
-# Start time
+# Time starts
 start = time.time()
 
 # Repeat deck shuffling for 3 times
