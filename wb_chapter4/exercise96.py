@@ -11,19 +11,14 @@ def isInteger(s):
     stripped_s = s.strip()
     if len(stripped_s) < 1:
         return False
-    for i in range(0, len(stripped_s)):
-        if i == 0:
-            if stripped_s[i] in char_in_integer_string:
-                pass
-            else:
-                return False
-        else:
-            if stripped_s[i] in char_in_integer_string[2:]:
-                pass
-            else:
-                return False
-        i = i + 1
-    return True
+    if len(stripped_s) == 1:
+        if stripped_s in char_in_integer_string[2:]:
+            return True
+    if len(stripped_s) > 1:
+        if stripped_s[0] in char_in_integer_string and\
+            stripped_s[1:] in char_in_integer_string[2:]:
+            return True    
+    return False
 
 # Read a string from user and display if it represnts an integer
 def main():
