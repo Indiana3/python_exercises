@@ -24,7 +24,7 @@ def infixToPostfix(tokens_with_unary):
         else:
             # Token is an operator
             if tokens_with_unary[i] in ["+", "-", "u+", "u-",
-            "*", "/", "^"]:
+            "*", "/", "**"]:
                 while len(operators) != 0 and operators[-1] not in \
                     ["(", "[", "{"] and operatorPrecedence(tokens_with_unary[i]) \
                         < operatorPrecedence(operators[-1]):
