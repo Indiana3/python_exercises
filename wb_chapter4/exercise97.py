@@ -13,7 +13,7 @@ def operatorPrecedence(operator):
         return 2
     if operator == "u+" or operator == "u-":
         return 3 
-    if operator == "^":
+    if operator == "**":
         return 4
     else:
         return -1
