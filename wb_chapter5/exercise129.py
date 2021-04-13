@@ -20,7 +20,7 @@ def tokenGenerator(s):
     # All parentheses are available
     parentheses = ["(", ")", "[", "]", "{", "}"]
     # Operators available
-    operators = ["+", "-", "*", "/", "^"]
+    operators = ["+", "-", "*", "/", "**"]
     # Create a tokens list to store tokens
     tokens = []
     # For each char of s
