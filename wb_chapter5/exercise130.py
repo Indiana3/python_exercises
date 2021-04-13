@@ -23,7 +23,7 @@ def unaryIdentifier(t):
             t[i-1] == "[" or t[i-1] == "{" or \
             t[i-1] == "+" or t[i-1] == "-" or \
             t[i-1] == "*" or t[i-1] == "/" or \
-            t[i-1] == "^":
+            t[i-1] == "**":
                 # Mark the operator with "u" char 
                 mod_token = "u" + t[i]
                 mod_tokens.append(mod_token)
