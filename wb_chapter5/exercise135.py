@@ -6,30 +6,26 @@
 limit = int(input("Please, enter a limit (integer number): "))
 # Create an empty list to store values
 nums = []
-# Create a list of integers from 0 to LIMIT
-for i in range(limit):
+# Create a list of integers from 0 to limit
+for i in range(limit+1):
     nums.append(i)
-# Cross out 0 and 1 because they aren't prime
-del nums[0:2]
-# Set p equal to each number of the list not equal to 0
-for i in range(len(nums)):
-    if nums[i] == 0:
-        continue
-    p = nums[i]
-
-    # For each number, check if it's a multiple of p
-    # If it's a multiple but not equal to p, change
-    # it's value with 0
-    for j in range(len(nums)):
-        if nums[j] == p:
-            pass
-        else:
-            if nums[j] % p == 0:
-                nums[j] = 0
-# Print all the prime numbers lower than LIMITS
-for i in range(len(nums)):
-    if nums[i] != 0:
-        print(nums[i])
+# "Cross out" 1 by replacing it with 0
+nums[1] = 0
+# "Cross out" all multiples of each prime numbers we discover
+p = 2
+while p < limit:
+    # "Cross out" all multiples of p (but not p itself)
+    for i in range(p*2, limit+1, p):
+        nums[i] = 0
+    # Find the next number not "crossed out"
+    p = p+1
+    while p < limit and nums[p] == 0:
+        p = p+1
+# Print all the prime numbers lower than limits
+print("The prime numbers up to", limit, "are: ")
+for num in nums:
+    if nums[num] != 0:
+        print(num)
 
 
 
