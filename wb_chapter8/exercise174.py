@@ -1,3 +1,7 @@
+##
+# Compute the greatest common divisor of 2 positive integers
+#
+
 ## Compute the greatest common divisor of 2 positive integers
 # @param a the first positive integer
 # @param b the second positive integer
@@ -9,7 +13,6 @@ def greatestCommonDivisor(a, b):
         return a
     # Recursive case
     c = a % b
-    print(a, b, c)
     return greatestCommonDivisor(b, c)
 
 # Read 2 positive integers from user
