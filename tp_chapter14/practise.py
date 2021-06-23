@@ -13,6 +13,27 @@ for dirpath, dirnames, filenames in output:
         print(dirpath)
     for name in filenames:
         print(os.path.join(dirpath, name))
+
+## Catching exceptions
+try:
+    with open("pippo.txt") as fl:
+        lines = fl.readlines()
+        print(lines)
+except:
+    print("Something went wrong")
+
+## Databases
+import dbm
+
+db = dbm.open("test", "c")
+db["fruit"] = "bananas"
+print(db["fruit"])
+
+## Shelve module
+import shelve
+with shelve.open("test2") as db:
+    db["fruit"] = ["apple", "bananas", "kiwis"]
+    print(db["fruit"])
    
           
 
