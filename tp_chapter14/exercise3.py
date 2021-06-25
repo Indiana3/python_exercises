@@ -20,7 +20,7 @@ def sameExtention(dir=os.getcwd(), ext=".txt", same_extension = []):
         path = os.path.join(dir, name)
         # Check if it adresses to a file or a dir
         if os.path.isfile(path):
-            #Check if the extension of the file is equal to the given extension
+            # Check if the extension of the file is equal to the given extension
             if path[-index:] == ext:
                 # Add it to the list
                 same_extension.append(path)
