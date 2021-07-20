@@ -33,36 +33,37 @@ def setOfNames(path):
     fl.close()
     return set_of_names
 
-# Read the year from the user
-year = input("Please, enter a year (between 1900 and 2012): ")
+if __name__ == "__main__":
+    # Read the year from the user
+    year = input("Please, enter a year (between 1900 and 2012): ")
 
-# Check if the year is out of range (1900-2012) and
-# print an error message
-if int(year) < 1900 or int(year) > 2012:
-    print("Sorry, no data available")
-# Store the file paths in a variable
-else:
-    paths = bornInAGivenYear(all_paths, year)
+    # Check if the year is out of range (1900-2012) and
+    # print an error message
+    if int(year) < 1900 or int(year) > 2012:
+        print("Sorry, no data available")
+    # Store the file paths in a variable
+    else:
+        paths = bornInAGivenYear(all_paths, year)
 
-# For each file
-for path in paths:
-    # Create a set of names for boys
-    if "Boys" in path:
-        boy_names = setOfNames(path)
-    # Create a set of names for girls
-    elif "Girls" in path:
-        girl_names = setOfNames(path)
+    # For each file
+    for path in paths:
+        # Create a set of names for boys
+        if "Boys" in path:
+            boy_names = setOfNames(path)
+        # Create a set of names for girls
+        elif "Girls" in path:
+            girl_names = setOfNames(path)
 
-# Check if there are gender neutral names
-neutral_names = boy_names & girl_names
+    # Check if there are gender neutral names
+    neutral_names = boy_names & girl_names
 
-# Display the result
-if len(neutral_names) != 0:
-    print("The gender neutral names in the", year, "are: ")
-    for name in neutral_names:
-        print(name)
-else:
-    print("None") 
+    # Display the result
+    if len(neutral_names) != 0:
+        print("The gender neutral names in the", year, "are: ")
+        for name in neutral_names:
+            print(name)
+    else:
+        print("None") 
 
 
 
