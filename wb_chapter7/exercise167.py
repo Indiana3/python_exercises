@@ -29,7 +29,7 @@ fl.close()
 # Try to open the file to check for spelling mistakes
 # entered by the user
 try:
-    fl = open("spelling_mistakes.txt", "r", encoding="utf-8")
+    fl = open(sys.argv[1], "r", encoding="utf-8")
     # Read the first line and remove EOL chars
     line = fl.readline().strip()
     # While line is not an empty line
